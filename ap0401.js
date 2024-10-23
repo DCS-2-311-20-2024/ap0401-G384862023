@@ -108,11 +108,11 @@ function init() {
       new THREE.BoxGeometry(vFrameW, vFrameH, vFrameD),
       new MeshPhongMaterial({ color: 0xB3B3B3 })
     );
-    lFrame.position.x= (hFrameW/2);
+    lFrame.position.x= (hFrameW/2)-vFrameW/2;
     scene.add(lFrame);
     //   右の枠
     const rFrame = lFrame.clone();
-    rFrame.position.x= -(hFrameW/2);
+    rFrame.position.x= -(hFrameW/2)+vFrameW/2;
     scene.add(rFrame);
   }
 
